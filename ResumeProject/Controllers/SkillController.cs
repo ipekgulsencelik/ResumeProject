@@ -58,4 +58,5 @@ namespace ResumeProject.Controllers
             return RedirectToAction("Index");
 
         }
+    }
 }
