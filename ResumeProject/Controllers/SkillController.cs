@@ -14,5 +14,20 @@ namespace ResumeProject.Controllers
             var values = db.TblSkills.ToList();
             return View(values);
         }
+
+        [HttpGet]
+        public ActionResult AddSkill()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddSkill(TblSkill skill)
+        {
+            db.TblSkills.Add(skill);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
