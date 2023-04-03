@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ResumeProject.Models;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ResumeProject.Controllers
 {
     public class SkillController : Controller
     {
+        ResumeDBEntities db = new ResumeDBEntities();
+
         // GET: Skill
         public ActionResult Index()
         {
-            return View();
+            var values = db.TblSkills.ToList();
+            return View(values);
         }
     }
 }

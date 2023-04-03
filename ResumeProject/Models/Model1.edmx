@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ResumeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TblProfile">
+          <Key>
+            <PropertyRef Name="ProfileID" />
+          </Key>
+          <Property Name="ProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProfileTitle" Type="nvarchar(max)" />
+          <Property Name="ProfileDescription" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="SocialMedia1" Type="nvarchar" MaxLength="100" />
+          <Property Name="SocialMedia2" Type="nvarchar" MaxLength="100" />
+          <Property Name="SocialMedia3" Type="nvarchar" MaxLength="100" />
+          <Property Name="SocialMedia4" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TblProject">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectTitle" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProjectDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="ProjectImageUrl" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TblSkill">
+          <Key>
+            <PropertyRef Name="SkillID" />
+          </Key>
+          <Property Name="SkillID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SkillTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="SkillDescription" Type="nvarchar" MaxLength="250" />
+          <Property Name="SkillIcon" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TblTechnology">
+          <Key>
+            <PropertyRef Name="TechnologyID" />
+          </Key>
+          <Property Name="TechnologyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TechnologyTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="TechnologyValue" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ResumeDBModelStoreContainer">
+          <EntitySet Name="TblProfile" EntityType="Self.TblProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSkill" EntityType="Self.TblSkill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblTechnology" EntityType="Self.TblTechnology" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ResumeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TblProfile">
+          <Key>
+            <PropertyRef Name="ProfileID" />
+          </Key>
+          <Property Name="ProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProfileTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SocialMedia1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SocialMedia2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SocialMedia3" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SocialMedia4" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblProject">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblSkill">
+          <Key>
+            <PropertyRef Name="SkillID" />
+          </Key>
+          <Property Name="SkillID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SkillTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SkillDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="SkillIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblTechnology">
+          <Key>
+            <PropertyRef Name="TechnologyID" />
+          </Key>
+          <Property Name="TechnologyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TechnologyTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TechnologyValue" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ResumeDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TblProfiles" EntityType="Self.TblProfile" />
+          <EntitySet Name="TblProjects" EntityType="Self.TblProject" />
+          <EntitySet Name="TblSkills" EntityType="Self.TblSkill" />
+          <EntitySet Name="TblTechnologies" EntityType="Self.TblTechnology" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ResumeDBModelStoreContainer" CdmEntityContainer="ResumeDBEntities">
+          <EntitySetMapping Name="TblProfiles">
+            <EntityTypeMapping TypeName="ResumeDBModel.TblProfile">
+              <MappingFragment StoreEntitySet="TblProfile">
+                <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+                <ScalarProperty Name="ProfileTitle" ColumnName="ProfileTitle" />
+                <ScalarProperty Name="ProfileDescription" ColumnName="ProfileDescription" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="SocialMedia1" ColumnName="SocialMedia1" />
+                <ScalarProperty Name="SocialMedia2" ColumnName="SocialMedia2" />
+                <ScalarProperty Name="SocialMedia3" ColumnName="SocialMedia3" />
+                <ScalarProperty Name="SocialMedia4" ColumnName="SocialMedia4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblProjects">
+            <EntityTypeMapping TypeName="ResumeDBModel.TblProject">
+              <MappingFragment StoreEntitySet="TblProject">
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+                <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+                <ScalarProperty Name="ProjectImageUrl" ColumnName="ProjectImageUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblSkills">
+            <EntityTypeMapping TypeName="ResumeDBModel.TblSkill">
+              <MappingFragment StoreEntitySet="TblSkill">
+                <ScalarProperty Name="SkillID" ColumnName="SkillID" />
+                <ScalarProperty Name="SkillTitle" ColumnName="SkillTitle" />
+                <ScalarProperty Name="SkillDescription" ColumnName="SkillDescription" />
+                <ScalarProperty Name="SkillIcon" ColumnName="SkillIcon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblTechnologies">
+            <EntityTypeMapping TypeName="ResumeDBModel.TblTechnology">
+              <MappingFragment StoreEntitySet="TblTechnology">
+                <ScalarProperty Name="TechnologyID" ColumnName="TechnologyID" />
+                <ScalarProperty Name="TechnologyTitle" ColumnName="TechnologyTitle" />
+                <ScalarProperty Name="TechnologyValue" ColumnName="TechnologyValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
