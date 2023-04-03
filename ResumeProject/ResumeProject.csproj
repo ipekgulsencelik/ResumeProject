@@ -148,6 +148,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblContact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblProfile.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
