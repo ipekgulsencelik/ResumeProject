@@ -12,15 +12,12 @@ namespace ResumeProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TblContact
+    public partial class sysdiagram
     {
-        public int ContactID { get; set; }
-        public string FullName { get; set; }
-        public string Mail { get; set; }
-        public Nullable<int> Subject { get; set; }
-        public string Message { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-    
-        public virtual TblCategory TblCategory { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -30,5 +30,7 @@ namespace ResumeProject.Models
         public virtual DbSet<TblSkill> TblSkills { get; set; }
         public virtual DbSet<TblTechnology> TblTechnologies { get; set; }
         public virtual DbSet<TblContact> TblContacts { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TblCategory> TblCategories { get; set; }
     }
 }
