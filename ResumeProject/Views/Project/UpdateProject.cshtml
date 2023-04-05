@@ -1,0 +1,22 @@
+﻿@model ResumeProject.Models.TblProject
+
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Add Project Page</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ProjectID)
+    <label>Project Title</label>
+    @Html.TextBoxFor(x => x.ProjectTitle, new { @class = "form-control" })
+    <br />
+    <label>Project Image Url</label>
+    @Html.TextBoxFor(x => x.ProjectImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Project Description</label>
+    @Html.TextBoxFor(x => x.ProjectDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Update Project</button>
+</form>
