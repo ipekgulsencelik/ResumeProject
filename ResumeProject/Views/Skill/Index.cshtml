@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <h2>Skill List</h2>
@@ -16,8 +17,9 @@
     </tr>
     @foreach (var item in Model)
     {
+        count++;
         <tr>
-            <td>@item.SkillID</td>
+            <td>@count</td>
             <td>@item.SkillTitle</td>
             <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-outline-danger">Delete</a></td>
             <td><a href="/Skill/UpdateSkill/@item.SkillID" class="btn btn-outline-success">Update</a></td>
