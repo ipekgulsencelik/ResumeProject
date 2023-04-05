@@ -14,5 +14,20 @@ namespace ResumeProject.Controllers
             var values = db.TblTechnologies.ToList();
             return View(values);
         }
+
+        [HttpGet]
+        public ActionResult AddTechnology()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddTechnology(TblTechnology technology)
+        {
+            db.TblTechnologies.Add(technology);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
