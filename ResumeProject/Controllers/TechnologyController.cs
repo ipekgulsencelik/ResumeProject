@@ -29,5 +29,14 @@ namespace ResumeProject.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult DeleteTechnology(int id)
+        {
+            var value = db.TblTechnologies.Find(id);
+            db.TblTechnologies.Remove(value);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
