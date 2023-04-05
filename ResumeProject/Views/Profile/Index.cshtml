@@ -1,0 +1,44 @@
+﻿@using ResumeProject.Models
+@model List<TblProfile>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Profile List</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Profile Title</th>
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Phone</th>
+        <th>Social Media 1</th>
+        <th>Social Media 2</th>
+        <th>Social Media 3</th>
+        <th>Social Media 4</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.ProfileTitle</td>
+            <td>@item.Name</td>
+            <td>@item.Mail</td>
+            <td>@item.Phone</td>
+            <td>@item.SocialMedia1</td>
+            <td>@item.SocialMedia2</td>
+            <td>@item.SocialMedia3</td>
+            <td>@item.SocialMedia4</td>
+            <td><a href="/Profile/DeleteProfile/@item.ProfileID" class="btn btn-outline-danger">Delete</a></td>
+            <td><a href="/Profile/UpdateProfile/@item.ProfileID" class="btn btn-outline-success">Update</a></td>
+        </tr>
+    }
+</table>
+<a href="/Profile/AddProfile/" class="btn btn-outline-primary">Create New Profile</a>
