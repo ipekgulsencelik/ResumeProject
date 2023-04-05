@@ -352,6 +352,7 @@
     <Content Include="Views\Skill\UpdateSkill.cshtml" />
     <Content Include="Views\Technology\Index.cshtml" />
     <Content Include="Views\Technology\AddTechnology.cshtml" />
+    <Content Include="Views\Technology\UpdateTechnology.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

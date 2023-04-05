@@ -4,6 +4,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <h2>Technology List</h2>
@@ -18,8 +19,9 @@
     </tr>
     @foreach (var item in Model)
     {
+        count++;
         <tr>
-            <td>@item.TechnologyID</td>
+            <td>@count</td>
             <td>@item.TechnologyTitle</td>
             <td>@item.TechnologyValue</td>
             <td><a href="/Technology/DeleteTechnology/@item.TechnologyID" class="btn btn-outline-danger">Delete</a></td>

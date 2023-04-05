@@ -38,5 +38,23 @@ namespace ResumeProject.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult UpdateTechnology(int id)
+        {
+            var value = db.TblTechnologies.Find(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateTechnology(TblTechnology technology)
+        {
+            var value = db.TblTechnologies.Find(technology.TechnologyID);
+            value.TechnologyTitle = technology.TechnologyTitle;
+            value.TechnologyValue = technology.TechnologyValue;
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
