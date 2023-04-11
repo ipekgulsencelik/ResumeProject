@@ -1,4 +1,5 @@
-﻿@model List<ResumeProject.Models.TblCategory>
+﻿@using ResumeProject.Models
+@model List<TblCategory>
 
 @{
     ViewBag.Title = "Index";
@@ -14,6 +15,7 @@
         <th>Category Name</th>
         <th>Delete</th>
         <th>Update</th>
+        <th>Details</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -23,6 +25,7 @@
             <td>@item.CategoryName</td>
             <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-danger">Delete</a></td>
             <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Update</a></td>
+            <td><a href="/Category/GetMessageBySubject/@item.CategoryID" class="btn btn-outline-dark">Show Message</a></td>
         </tr>
     }
 </table>

@@ -1,0 +1,34 @@
+﻿@using ResumeProject.Models
+@model List<TblContact>
+
+@{
+    ViewBag.Title = "GetMessageBySubject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Get Message By Subject</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Full Name</th>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Delete</th>
+        <th>Open Message</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.FullName</td>
+            <td>@item.TblCategory.CategoryName</td>
+            <td>@item.Date</td>
+            <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-outline-danger">Delete</a></td>
+            <td><a href="#" class="btn btn-outline-success">Open Message</a></td>
+        </tr>
+    }
+</table>
+

@@ -373,6 +373,7 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\AddProfile.cshtml" />
     <Content Include="Views\Profile\UpdateProfile.cshtml" />
+    <Content Include="Views\Category\GetMessageBySubject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
