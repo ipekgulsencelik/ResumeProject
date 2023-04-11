@@ -12,6 +12,8 @@ namespace ResumeProject.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ResumeDBEntities : DbContext
     {
@@ -32,5 +34,10 @@ namespace ResumeProject.Models
         public virtual DbSet<TblContact> TblContacts { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TblCategory> TblCategories { get; set; }
+    
+        public virtual ObjectResult<Nullable<int>> CountRequest()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("CountRequest");
+        }
     }
 }

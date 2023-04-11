@@ -87,6 +87,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="CountRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="ResumeDBModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
@@ -158,6 +159,7 @@
             <End Role="TblCategory" EntitySet="TblCategories" />
             <End Role="TblContact" EntitySet="TblContacts" />
           </AssociationSet>
+          <FunctionImport Name="CountRequest" ReturnType="Collection(Int32)" />
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -284,6 +286,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CountRequest" FunctionName="ResumeDBModel.Store.CountRequest" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
