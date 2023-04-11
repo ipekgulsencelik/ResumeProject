@@ -17,5 +17,14 @@ namespace ResumeProject.Controllers
             var values = db.TblContacts.ToList();
             return View(values);
         }
+
+        public ActionResult DeleteContact(int id)
+        {
+            var value = db.TblContacts.Find(id);
+            db.TblContacts.Remove(value);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
