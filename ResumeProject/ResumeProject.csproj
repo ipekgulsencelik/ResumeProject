@@ -443,6 +443,18 @@
     <Content Include="Views\Category\GetMessageBySubject.cshtml" />
     <Content Include="Views\Statistic\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialHeader.cshtml" />
+    <Content Include="Views\Default\PartialBanner.cshtml" />
+    <Content Include="Views\Default\PartialScripts.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialBrands.cshtml" />
+    <Content Include="Views\Default\PartialPortfolio.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialServices.cshtml" />
+    <Content Include="Views\Default\PartialStats.cshtml" />
+    <Content Include="Views\Default\PartialFeaturedSkills.cshtml" />
+    <Content Include="Views\Default\PartialChoose.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
