@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="ResumeDBModel.TblSkill" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeDBModel.TblTechnology" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeDBModel.TblContact" Width="1.5" PointX="5.375" PointY="3.875" />
+        <EntityTypeShape EntityType="ResumeDBModel.TblService" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

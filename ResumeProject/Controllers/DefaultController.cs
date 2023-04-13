@@ -1,71 +1,82 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
+using ResumeProject.Models;
 
 namespace ResumeProject.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+        ResumeDBEntities db = new ResumeDBEntities();
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult PartialHead()
+        public PartialViewResult PartialHeader()
         {
             return PartialView();
         }
 
-        public ActionResult PartialHeader()
+        public PartialViewResult PartialNavbar()
         {
             return PartialView();
         }
 
-        public ActionResult PartialAbout()
+        public PartialViewResult PartialAbout()
+        {
+            var values = db.TblProfiles.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialServices()
+        {
+            var values = db.TblServices.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialFeaturedSkills()
+        {
+            var values = db.TblTechnologies.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialChoose()
         {
             return PartialView();
         }
 
-        public ActionResult PartialServices()
+        public PartialViewResult PartialStats()
+        {
+            ViewBag.skillCount = db.TblSkills.Count();
+            ViewBag.serviceCount = db.TblServices.Count();
+            ViewBag.averageTechnologyValue = db.TblTechnologies.Average(x => x.TechnologyValue);
+            ViewBag.happyCustomer = 38;
+
+            return PartialView();
+        }
+
+        public PartialViewResult PartialBanner()
         {
             return PartialView();
         }
 
-        public ActionResult PartialFeaturedSkills()
+        public PartialViewResult PartialPortfolio()
         {
             return PartialView();
         }
 
-        public ActionResult PartialChoose()
+        public PartialViewResult PartialBrands()
         {
             return PartialView();
         }
 
-        public ActionResult PartialStats()
+        public PartialViewResult PartialFooter()
         {
             return PartialView();
         }
 
-        public ActionResult PartialBanner()
-        {
-            return PartialView();
-        }
-
-        public ActionResult PartialPortfolio()
-        {
-            return PartialView();
-        }
-
-        public ActionResult PartialBrands()
-        {
-            return PartialView();
-        }
-
-        public ActionResult PartialFooter()
-        {
-            return PartialView();
-        }
-
-        public ActionResult PartialScripts()
+        public PartialViewResult PartialScripts()
         {
             return PartialView();
         }

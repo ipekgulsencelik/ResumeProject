@@ -10,12 +10,12 @@ Author URL: http://w3layouts.com
 <!doctype html>
 <html lang="en">
 
-@Html.Action("PartialHead")
+@Html.Action("PartialHeader")
 
 <body>
 
     <!--header-->
-    @Html.Action("PartialHeader")
+    @Html.Action("PartialNavbar")
     <!--//header-->
     <!-- banner section -->
     @Html.Action("PartialBanner")
@@ -44,6 +44,9 @@ Author URL: http://w3layouts.com
     <!-- footer -->
     @Html.Action("PartialFooter")
     <!-- //footer -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
     <!-- Js scripts -->
     @Html.Action("PartialScripts")
     <!-- //Js scripts -->

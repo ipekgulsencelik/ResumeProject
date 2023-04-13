@@ -1,4 +1,9 @@
-﻿<section class="w3l-about py-5" id="about">
+﻿@using ResumeProject.Models
+@model List<TblProfile>
+
+@foreach (var item in Model)
+{
+<section class="w3l-about py-5" id="about">
     <div class="container py-md-5 py-2">
         <div class="row w3l-row">
             <div class="col-lg-5 my-image pe-lg-5 mb-lg-0 mb-md-5 mb-4">
@@ -6,24 +11,24 @@
             </div>
             <div class="col-lg-7 w3l-about-info px-lg-4 align-center">
                 <h6 class="w3l-title-small mb-1">My Biography</h6>
-                <h3 class="w3l-title-main mb-2">A Lead UI Designer & Web Developer based in UK</h3>
-                <p class="my-4 pe-lg-5">I love Graphic design and Photography and have been working on my portfolio since 2016. I Can give your business a new Creative start right away! Contact me and we will discuss your projects!</p>
+                <h3 class="w3l-title-main mb-2">@item.ProfileTitle</h3>
+                <p class="my-4 pe-lg-5">@item.ProfileDescription</p>
                 <div class="my-info mt-4">
                     <div class="single-info">
                         <span>Name:</span>
-                        <p>John Watson</p>
+                        <p>@item.Name</p>
                     </div>
                     <div class="single-info">
                         <span>From:</span>
-                        <p>London, UK</p>
+                        <p>@item.Address</p>
                     </div>
                     <div class="single-info">
                         <span>Email:</span>
-                        <p><a href="mailto:example@mail.com">example@mail.com</a></p>
+                        <p><a href="mailto:example@mail.com">@item.Mail</a></p>
                     </div>
                     <div class="single-info">
                         <span>Phone:</span>
-                        <p><a href="tel:+21 234 567 8901">+21 234 567 8901</a></p>
+                        <p><a href="tel:+21 234 567 8901">@item.Phone</a></p>
                     </div>
                 </div>
 
@@ -33,20 +38,20 @@
                     </li>
 
                     <li>
-                        <a href="https://in.linkedin.com/company/w3layouts"><span class="fab fa-behance"></span></a>
+                        <a href="@item.SocialMedia1"><span class="fab fa-behance"></span></a>
                     </li>
 
                     <li>
-                        <a href="https://in.linkedin.com/company/w3layouts"><span class="fab fa-linkedin-in"></span></a>
+                        <a href="@item.SocialMedia2"><span class="fab fa-linkedin-in"></span></a>
                     </li>
 
                     <li>
-                        <a href="https://www.facebook.com/w3layouts/">
+                        <a href="@item.SocialMedia3">
                             <span class="fab fa-facebook-f"></span>
                         </a>
                     </li>
 
-                    <li><a href="https://twitter.com/W3layouts"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="@item.SocialMedia4"><span class="fab fa-twitter"></span></a></li>
 
                 </ul>
                 <div class="w3l-btn">
@@ -57,3 +62,4 @@
         </div>
     </div>
 </section>
+}
