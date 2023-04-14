@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
@@ -473,6 +474,12 @@
     <Content Include="Views\Service\PartialFeature.cshtml" />
     <Content Include="Views\Service\PartialServices.cshtml" />
     <Content Include="Views\Service\PartialSolutions.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\PartialFeature.cshtml" />
+    <Content Include="Views\About\PartialAbout.cshtml" />
+    <Content Include="Views\About\PartialTestimonial.cshtml" />
+    <Content Include="Views\About\PartialJoin.cshtml" />
+    <Content Include="Views\About\PartialVideoPopup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
