@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 using ResumeProject.Models;
 
@@ -31,7 +32,7 @@ namespace ResumeProject.Controllers
 
         public PartialViewResult PartialServices()
         {
-            var values = db.TblServices.ToList();
+            var values = db.TblServices.Take(3).ToList();
             return PartialView(values);
         }
 

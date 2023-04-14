@@ -12,6 +12,7 @@
         <EntityTypeShape EntityType="ResumeDBModel.TblContact" Width="1.5" PointX="5.375" PointY="3.875" />
         <EntityTypeShape EntityType="ResumeDBModel.TblService" Width="1.5" PointX="0.75" PointY="6.75" />
         <EntityTypeShape EntityType="ResumeDBModel.TblExperience" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ResumeDBModel.TblSolution" Width="1.5" PointX="7.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

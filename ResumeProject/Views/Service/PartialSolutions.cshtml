@@ -1,0 +1,30 @@
+﻿@using ResumeProject.Models
+@model List<TblSolution>
+
+<div class="service-section py-5">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="title-heading-w3 mx-auto text-center mb-sm-5 mb-4">
+            <h3 class="w3l-title-main">
+                Innovative solutions
+                to boost your creative projects
+            </h3>
+        </div>
+        <div class="row justify-content-center">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-sm-6 mt-4 pt-2 item">
+                    <div class="card">
+                        <div class="card-header p-0 position-relative border-0">
+                            <a href="services.html">
+                                <img class="d-block img-responsive" src="@item.SolutionImageUrl" alt="card-image">
+                            </a>
+                        </div>
+                        <div class="card-body service-details">
+                            <a href="/Service/Index/" class="service-heading">@item.SolutionTitle </a>
+                        </div>
+                    </div>
+                </div>
+            }            
+        </div>
+    </div>
+</div>

@@ -36,6 +36,7 @@ namespace ResumeProject.Models
         public virtual DbSet<TblCategory> TblCategories { get; set; }
         public virtual DbSet<TblService> TblServices { get; set; }
         public virtual DbSet<TblExperience> TblExperiences { get; set; }
+        public virtual DbSet<TblSolution> TblSolutions { get; set; }
     
         public virtual ObjectResult<Nullable<int>> CountRequest()
         {
