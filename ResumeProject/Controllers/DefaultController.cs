@@ -63,7 +63,8 @@ namespace ResumeProject.Controllers
 
         public PartialViewResult PartialPortfolio()
         {
-            return PartialView();
+            var values = db.TblProjects.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialBrands()
