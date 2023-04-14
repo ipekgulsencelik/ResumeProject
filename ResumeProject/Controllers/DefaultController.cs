@@ -41,9 +41,10 @@ namespace ResumeProject.Controllers
             return PartialView(values);
         }
 
-        public PartialViewResult PartialChoose()
+        public PartialViewResult PartialExperience()
         {
-            return PartialView();
+            var values = db.TblExperiences.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialStats()

@@ -164,6 +164,9 @@
     <Compile Include="Models\TblContact.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblExperience.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblProfile.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -456,7 +459,7 @@
     <Content Include="Views\Default\PartialServices.cshtml" />
     <Content Include="Views\Default\PartialStats.cshtml" />
     <Content Include="Views\Default\PartialFeaturedSkills.cshtml" />
-    <Content Include="Views\Default\PartialChoose.cshtml" />
+    <Content Include="Views\Default\PartialExperience.cshtml" />
     <Content Include="Views\Default\PartialNavbar.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -4,13 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="17529ac0c5a24ea4b0cd2d3b0cd701d3" Name="Diagram1">
+      <Diagram DiagramId="17529ac0c5a24ea4b0cd2d3b0cd701d3" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="ResumeDBModel.TblProfile" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeDBModel.TblProject" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeDBModel.TblSkill" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeDBModel.TblTechnology" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeDBModel.TblContact" Width="1.5" PointX="5.375" PointY="3.875" />
         <EntityTypeShape EntityType="ResumeDBModel.TblService" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ResumeDBModel.TblExperience" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

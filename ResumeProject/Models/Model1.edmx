@@ -33,6 +33,15 @@
           <Property Name="Message" Type="nvarchar" MaxLength="100" />
           <Property Name="Date" Type="datetime" />
         </EntityType>
+        <EntityType Name="TblExperience">
+          <Key>
+            <PropertyRef Name="ExperienceID" />
+          </Key>
+          <Property Name="ExperienceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExperienceTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExperienceIcon" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExperienceDescription" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="TblProfile">
           <Key>
             <PropertyRef Name="ProfileID" />
@@ -101,6 +110,7 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblExperience" EntityType="Self.TblExperience" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProfile" EntityType="Self.TblProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
@@ -171,6 +181,7 @@
           </AssociationSet>
           <FunctionImport Name="CountRequest" ReturnType="Collection(Int32)" />
           <EntitySet Name="TblServices" EntityType="ResumeDBModel.TblService" />
+          <EntitySet Name="TblExperiences" EntityType="ResumeDBModel.TblExperience" />
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -222,6 +233,15 @@
           <Property Name="ServiceTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ServiceIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ServiceDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblExperience">
+          <Key>
+            <PropertyRef Name="ExperienceID" />
+          </Key>
+          <Property Name="ExperienceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExperienceTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExperienceIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExperienceDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -314,6 +334,16 @@
                 <ScalarProperty Name="ServiceIcon" ColumnName="ServiceIcon" />
                 <ScalarProperty Name="ServiceTitle" ColumnName="ServiceTitle" />
                 <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblExperiences">
+            <EntityTypeMapping TypeName="ResumeDBModel.TblExperience">
+              <MappingFragment StoreEntitySet="TblExperience">
+                <ScalarProperty Name="ExperienceDescription" ColumnName="ExperienceDescription" />
+                <ScalarProperty Name="ExperienceIcon" ColumnName="ExperienceIcon" />
+                <ScalarProperty Name="ExperienceTitle" ColumnName="ExperienceTitle" />
+                <ScalarProperty Name="ExperienceID" ColumnName="ExperienceID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
